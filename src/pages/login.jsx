@@ -26,7 +26,7 @@ export default function Login() {
 
       if(response.success){
         console.log('Conta criada com sucesso');
-        navigate('/home');
+        navigate('/petAlert_deploy/home');
       }else{
         setError(response.msg);
       }
@@ -44,7 +44,7 @@ export default function Login() {
 
       if(response.success){
         console.log('Login com sucesso');
-        navigate('/home');
+        navigate('/petAlert_deploy/home');
       }else{
         setError(response.msg);
       }
