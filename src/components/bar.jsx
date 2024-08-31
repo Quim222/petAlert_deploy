@@ -9,7 +9,7 @@ export default function Bar({ raceCounts }) {
     exportEnabled: true,
     theme: "light2", // "light1", "dark1", "dark2"
     title: {
-      text: "Users Animals"
+      text: "Most Breed Losts"
     },
     axisX: {
       title: "Breed types",

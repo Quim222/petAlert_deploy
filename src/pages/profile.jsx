@@ -149,28 +149,28 @@ export default function Profile() {
     try {
       // Verifique se houve alterações no name, tele, local ou email
       if (name === user.name && contact === user.contacto && place === user.localidade && email === user.email && pass === "") {
-        Swal.fire('Nenhuma alteração foi feita.', '', 'info');
+        Swal.fire('No changes were made.', '', 'info');
         return;
       }
   
       // Verifique se a senha é válida se ela foi alterada
       if (pass !== "" && pass.length < 6) {
-        Swal.fire('Erro', 'A senha deve ter no mínimo 6 caracteres.', 'error');
+        Swal.fire('Error', 'The password must be at least 6 characters long.', 'error');
         return;
       }
 
       const { value: password } = await Swal.fire({
-        title: 'Introduza a sua senha atual para validar as alterações',
+        title: 'Enter your current password to validate changes',
         input: 'password',
-        inputLabel: 'Senha',
-        inputPlaceholder: 'Introduza a sua senha',
+        inputLabel: 'Password',
+        inputPlaceholder: 'Enter your password',
         showCancelButton: true,
-        confirmButtonText: 'Validar',
-        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Validate',
+        cancelButtonText: 'Cancel',
         showLoaderOnConfirm: true,
         preConfirm: async (pass) => {
           if (!pass) {
-            Swal.showValidationMessage('A senha é necessária');
+            Swal.showValidationMessage('Password is required');
             return;
           }
           try {
@@ -182,7 +182,7 @@ export default function Profile() {
           } catch (error) {
             let msg = error.message;
             if (msg.includes('(auth/wrong-password)')) msg = 'Wrong password';
-            Swal.showValidationMessage(`Erro: ${msg}. Por favor, verifique sua senha e tente novamente.`);
+            Swal.showValidationMessage(`Error: ${msg}. Please check your password and try again.`);
             return; // Retorna undefined para evitar resolver a promessa com sucesso
           }
         },
@@ -273,8 +273,8 @@ export default function Profile() {
         const { success } = await handlePasswordChange(email);
         if (success) {
           Swal.fire({
-            title: 'Successo',
-            text: 'Senha atualizada com sucesso. Faça login novamente.',
+            title: 'Success',
+            text: 'Password updated successfully. Log in again.',
             icon: 'success',
             confirmButtonText: 'OK',
           }).then((result) => {
@@ -286,8 +286,8 @@ export default function Profile() {
       } else {
         // Exibir mensagem de sucesso sem logout, caso a senha não tenha sido alterada
         Swal.fire({
-          title: 'Sucesso',
-          text: 'Dados atualizados com sucesso.',
+          title: 'Success',
+          text: 'Data updated successfully.',
           icon: 'success',
           confirmButtonText: 'OK',
         }).then((result) => {
@@ -298,8 +298,8 @@ export default function Profile() {
       }
   
     } catch (error) {
-      console.log('Erro ao atualizar os dados:', error);
-      Swal.fire('Erro', `Ocorreu um erro ao atualizar os dados. Por favor, tente novamente. ${error}`, 'error');
+      console.log('Error updating data:', error);
+      Swal.fire('Error', `An error occurred while updating the data. Please try again. ${error}`, 'error');
     }
   };
 

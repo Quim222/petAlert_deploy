@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import FooterComponent from '../components/FooterComponent';
-import { Link } from 'react-router-dom';
 import { useUserAuth } from '../components/UserAuthContext';
 import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 import './css/contact.css'; // Importa o CSS

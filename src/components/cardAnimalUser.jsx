@@ -261,7 +261,7 @@ export function CardPostUser({ item }) {
             ref={containerRef} 
             className="border border-white rounded-xl shadow-lg m-3 p-2"
         >
-            <div className={`flex flex-col lg:flex-row m-3 gap-3 items-center ${item.estado == 'Missing' && cursor-pointer}`}>
+            <div className={`flex flex-col lg:flex-row m-3 gap-3 items-center ${item.estado == 'Missing' && "cursor-pointer"}`}>
                 <div className='w-full lg:w-[60%]'>
                     <Typography className="truncate w-full" color="gray">Nome: {item.nomeAnimal}</Typography>
                     <Typography className="truncate w-full" color="gray">Raça: {item.racaAnimal}</Typography>

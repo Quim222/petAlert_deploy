@@ -95,7 +95,7 @@ export default function Login() {
             <input type="tel" placeholder="Telefone" maxLength={9} onChange={(e) => setTelefone(e.target.value)}/>
             <div className='flex flex-col gap-4 w-full items-center mt-4 md:justify-around md:flex-row'>
               <button>Sign Up</button>
-              <Link id='link' style={{color: 'white'}} to={'/'}>Back</Link>
+              <Link id='link' style={{color: 'white'}} to={'/petAlert_deploy'}>Back</Link>
             </div>
           </Form>
         </div>
@@ -108,7 +108,7 @@ export default function Login() {
             <a href="#">Forgot your password?</a>
             <div className='flex flex-col gap-4 w-full items-center mt-4 md:justify-around md:flex-row'>
               <button>Sign In</button>
-              <Link id='link' style={{color: 'white'}} to={'/'}>Back</Link>
+              <Link id='link' style={{color: 'white'}} to={'/petAlert_deploy'}>Back</Link>
             </div>
           </Form>
         </div>

@@ -14,7 +14,7 @@ export default function Bar({ raceCounts }) {
     backgroundColor: "transparent",
     data: [{
       type: "pie", // Change to "column" or "bar" if you want a bar chart
-      indexLabel: "{label} users: {y} Animals",
+      indexLabel: `{label} user(s): {y} Animal(s)`,
       startAngle: 0,
       dataPoints: raceCounts.map((race) => ({
         y: race.animalsCount,  // Value for the chart
