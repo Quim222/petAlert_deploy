@@ -4,13 +4,14 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
+
 const firebaseConfig = {
-    apiKey: "AIzaSyAyHHLVkO9_eKxEPILNnWBEBl-a7SXWOBw",
-    authDomain: "petalert-755d9.firebaseapp.com",
-    projectId: "petalert-755d9",
-    storageBucket: "petalert-755d9.appspot.com",
-    messagingSenderId: "336183360505",
-    appId: "1:336183360505:web:948672b6529b5377eb5b28"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID
 };
 
 // Inicializando Firebase
