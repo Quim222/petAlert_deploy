@@ -17,7 +17,7 @@ import Contact from './pages/Contact.jsx';
 
 const router = createBrowserRouter([
   {
-    path: '/petAlert_deploy/',
+    path: '/petAlert_deploy',
     element: <Home />,
     errorElement: <NotFound />,
   },
