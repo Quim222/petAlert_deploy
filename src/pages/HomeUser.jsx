@@ -31,20 +31,20 @@ export default function HomeUser() {
     const handleCardClick = (id) => {
         if (activeCard === id) {
           setActiveCard(null); // Se o card já estiver ativo, desativa-o
-          navigate('/petAlert_deploy/home'); // Navega para a rota "home" sem parâmetros para fechar o Outlet
+          navigate('/home'); // Navega para a rota "home" sem parâmetros para fechar o Outlet
         } else {
         if (isMobileView) {
           setIsModalOpen(true); // Abre o modal apenas em telas menores
         }
         setActiveCard(id); // Ativa o card clicado
-        navigate(`/petAlert_deploy/home/${id}`, { state: { someData: dados } });; // Navega para a rota com o ID do card
+        navigate(`/home/${id}`, { state: { someData: dados } });; // Navega para a rota com o ID do card
         }
     };
 
     const handleCloseModal = () => {
       setIsModalOpen(false); // Fecha o modal
       setActiveCard(null); // Se o card já estiver ativo, desativa-o
-      navigate('/petAlert_deploy/home');
+      navigate('/home');
     };
 
     useEffect(() => {

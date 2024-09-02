@@ -41,6 +41,8 @@ export const useRouteAnimal = (docID) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true); // Estado de loading
 
+    console.log(docID);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
