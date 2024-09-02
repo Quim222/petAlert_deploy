@@ -14,7 +14,7 @@ const userInfo = {
       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   }
   const userNavigation = [
-    { name: 'Your Profile', to: '/profile' }, // Rota de exemplo
+    { name: 'Your Profile', to: '/petAlert_deploy/profile' }, // Rota de exemplo
     { name: 'Sign out'}, // Rota de logout
   ]
   
@@ -27,13 +27,13 @@ export default function Header({page}) {
     const navigate = useNavigate();
 
     const navigationNoUser = [
-        { name: 'Home', href: '/', current: page === 'Home' },
-        { name: 'Login', href: '/login', current: page === 'Login' },
+        { name: 'Home', href: '/petAlert_deploy', current: page === 'Home' },
+        { name: 'Login', href: '/petAlert_deploy/login', current: page === 'Login' },
     ]
       
     const navigationLogin = [
-        { name: 'Home', href: '/', current: page === 'Home' },
-        { name: 'Publications', href: '/home', current: page === 'HomeUser' },
+        { name: 'Home', href: '/petAlert_deploy', current: page === 'Home' },
+        { name: 'Publications', href: '/petAlert_deploy/home', current: page === 'HomeUser' },
     ]
 
 
@@ -137,8 +137,8 @@ export default function Header({page}) {
                   <img alt="" src={userInfo.imageUrl} className="h-10 w-10 rounded-full" />
                 </div>
                 <div className="ml-3">
-                  <div className="text-base font-medium leading-none text-black">{userInfo.name}</div>
-                  <div className="text-sm font-medium leading-none text-white">{userInfo.email}</div>
+                  <div className="text-base font-medium leading-none text-black">{user.name}</div>
+                  <div className="text-sm font-medium leading-none text-white">{user.email}</div>
                 </div>
                 <button
                   type="button"

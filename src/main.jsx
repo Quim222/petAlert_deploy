@@ -17,16 +17,16 @@ import Contact from './pages/Contact.jsx';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/petAlert_deploy',
     element: <Home />,
     errorElement: <NotFound />,
   },
   {
-    path: '/login',
+    path: '/petAlert_deploy/login',
     element: <Login />,
   },
   {
-    path: '/home',
+    path: '/petAlert_deploy/home',
     element: (
       <ProtectedRouter>
         <HomeUser />
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: '/home/:pubID', // Rota relativa a /home
+        path: '/petAlert_deploy/home/:pubID', // Rota relativa a /home
         element: (
           <ProtectedRouter>
             <Publication />
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/profile',
+    path: '/petAlert_deploy/profile',
     element: (
       <ProtectedRouter>
         <Profile />
@@ -51,15 +51,15 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/about',
+    path: '/petAlert_deploy/about',
     element: <About />,
   },
   {
-    path: '/feedback',
+    path: '/petAlert_deploy/feedback',
     element: <Feedback />,
   },
   {
-    path: '/contact',
+    path: '/petAlert_deploy/contact',
     element: <Contact />,
   }
 

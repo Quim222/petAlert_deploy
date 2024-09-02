@@ -5,7 +5,7 @@ export default function NotFound() {
     return(
         <div>
             <h1>404 Not Found Page</h1>
-            <Link to={"/"}>Redirect to Home</Link>
+            <Link to={"/petAlert_deploy"}>Redirect to Home</Link>
 
         </div>
     )
